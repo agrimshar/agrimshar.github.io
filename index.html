@@ -732,11 +732,6 @@
 
     var but = document.getElementById("load-more");
     var divs = document.querySelectorAll('.getme > div');
-    divs.sort(function(a,b){
-  // Turn your strings into dates, and then subtract them
-  // to get a value that is either negative, positive, or zero.
-  return new Date(b.date) - new Date(a.date);
-});
     var insert = document.getElementById("insert");
 
     insert.appendChild(divs[0].cloneNode(true));
