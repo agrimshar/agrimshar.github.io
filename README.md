@@ -37,7 +37,8 @@
 2. Used javascript to dynamically display the latest project
 3. Looped through all projects and inserted into recent projects
 4. Implemented a load more button that dynamically loads additional projects
-5. 
+5. ![image](https://github.com/user-attachments/assets/e201c9b2-4f00-4893-bc4f-9fc590f3fa72)
+
 
 
 
