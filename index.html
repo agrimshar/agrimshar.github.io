@@ -367,7 +367,8 @@
       <h3 class="page-title white-text teal">Projects</h3>
       <div class="container">
         <div class="row" id="getme">
-            <div class="col s12 m6 l4 time" datetime="2002-02-01">
+            <div class="col s12 m6 l4 time">
+              <time datetime="2002-02-01"></time>
             <div class="card medium">
               <div class="card-image waves-effect waves-block waves-light">
                 <img alt="quiz app" src="/assets/img/project-quizup-logo-1.png" style="height: 100%; width: 100%" class="activator" />
@@ -442,7 +443,8 @@
           </div> -->
 
           <!-- Flask Project -->>
-          <div class="col s12 m6 l4 time" datetime="2004-02-01">
+          <div class="col s12 m6 l4 time" >
+            <time datetime="2004-02-01"></time>
             <div class="card medium">
               <div class="card-image waves-effect waves-block waves-light">
                 <img alt="Screenshot of web app" src="/assets/img/project-blog-logo.jpg"
@@ -481,7 +483,8 @@
             </div>
           </div>
 
-          <div class="col s12 m6 l4 time" datetime="1990-02-01">
+          <div class="col s12 m6 l4 time" >
+            <time datetime="1990-02-01"></time>
             <div class="card medium">
               <div class="card-image waves-effect waves-block waves-light">
                 <img alt="Screenshot of web app" src="/assets/img/project-blog-logo.jpg"
@@ -770,8 +773,17 @@
     
 
     var but = document.getElementById("load-more");
-    var divs = document.querySelectorAll('#getme > div');
+
     var insert = document.getElementById("insert");
+    
+    var divs = $('.time').get();
+    divs.sort(function(a, b) {
+	
+      var dateA = new Date($(a).find('time').attr('datetime'));
+      var dateB = new Date($(b).find('time').attr('datetime'));
+      return dateB - dateA;
+        
+    })
 
     insert.appendChild(divs[0].cloneNode(true));
 
