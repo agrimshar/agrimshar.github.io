@@ -366,7 +366,7 @@
     <section id="projects" class="section scrollspy">
       <h3 class="page-title white-text teal">Projects</h3>
       <div class="container">
-        <div class="row">
+        <div class="row getme">
           <ul class="sort-list">
             <li class="sort-item" data-event-date="August 21 2020">
             <div class="col s12 m6 l4">
@@ -681,6 +681,28 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.2099651349513!2d-79.39355846089143!3d43.66460289277538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34ba1caf84df%3A0x945aa043a7318b98!2sQueen&#39;s%20Park%2C%20110%20Wellesley%20St%20W%2C%20Toronto%2C%20ON%20M7A%201A2!5e0!3m2!1sen!2sca!4v1726852137550!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
+
+      <section id="recent" class="section scrollspy full-height">
+    <h3 class="page-title white-text teal">Recent Projects</h3>
+    <div class="container">
+      <p>Latest Project:</p>
+      <div class="row">
+        <div id="insert">
+
+        </div>
+      </div>
+      
+      <div class="row">
+        <p>More Projects:</p>
+        <div class="loaded-content">
+
+        </div>
+      </div>
+      <button id="load-more">
+        <p>Load More Content</p>
+      </button>
+    </div>
+  </section>
   </main>
 
   <!-- typed.js -->
@@ -710,20 +732,28 @@
         edge: "left", // Choose the horizontal origin
         closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
       })
-
-      (function($) {
-        var container = $(".sort-list");
-        var items = $(".sort-item");
-        
-        items.sort(function(a, b) {
-          let d1 = new Date($(a).data("event-date"));
-          let d2 = new Date($(b).data("event-date"));
-          return d1 > d2 ? -1 : d1 < d2 ? 1 : 0;
-        }).each(function() {
-          container.prepend(this);
-        });
-      })(jQuery);
     })
+
+    
+
+    var but = document.getElementById("load-more");
+    var divs = document.querySelectorAll('.getme > div');
+    var insert = document.getElementById("insert");
+
+    insert.appendChild(divs[0].cloneNode(true));
+
+    but.addEventListener("click", () => {
+      var list_2 = document.querySelector('.loaded-content');
+      divs.forEach((div) => {
+        if (div == divs[0]){
+
+        } else {
+          list_2.appendChild(div.cloneNode(true));
+        }
+      })
+    });
+
+
   </script>
 </body>
 
