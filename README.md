@@ -29,7 +29,16 @@
 1. Created a new section called places travelled
 2. Added section to nav bar
 3. Added map to the website
-4. 
+4. ![image](https://github.com/user-attachments/assets/9db2f54f-93bb-4e41-8bf3-01aec2632316)
+
+## Activity-5
+
+1. Included a recent projects section
+2. Used javascript to dynamically display the latest project
+3. Looped through all projects and inserted into recent projects
+4. Implemented a load more button that dynamically loads additional projects
+5. 
+
 
 
 
