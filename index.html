@@ -352,8 +352,8 @@
       <h3 class="page-title white-text teal">Projects</h3>
       <div class="container">
         <div class="row">
-
-          <div class="col s12 m6 l4">
+          <div class="sort-list">
+            <div class="col s12 m6 l4 sort-item" data-event-date="August 21 2020">
             <div class="card medium">
               <div class="card-image waves-effect waves-block waves-light">
                 <img alt="quiz app" src="/assets/img/project-quizup-logo-1.png" style="height: 100%; width: 100%" class="activator" />
@@ -428,7 +428,7 @@
           </div> -->
 
           <!-- Flask Project -->
-          <div class="col s12 m6 l4">
+          <div class="col s12 m6 l4 sort-item" data-event-date="August 21 2021">
             <div class="card medium">
               <div class="card-image waves-effect waves-block waves-light">
                 <img alt="Screenshot of web app" src="/assets/img/project-blog-logo.jpg"
@@ -466,6 +466,9 @@
               </div>
             </div>
           </div>
+          </div>
+
+          
 
           <!-- ************* -->
         </div>
@@ -688,6 +691,19 @@
         edge: "left", // Choose the horizontal origin
         closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
       })
+
+      (function($) {
+        var container = $(".sort-list");
+        var items = $(".sort-item");
+        
+        items.sort(function(a, b) {
+          let d1 = new Date($(a).data("event-date"));
+          let d2 = new Date($(b).data("event-date"));
+          return d1 > d2 ? -1 : d1 < d2 ? 1 : 0;
+        }).each(function() {
+          container.prepend(this);
+        });
+      })(jQuery);
     })
   </script>
 </body>
