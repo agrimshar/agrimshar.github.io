@@ -367,7 +367,7 @@
       <h3 class="page-title white-text teal">Projects</h3>
       <div class="container">
         <div class="row getme">
-            <div class="col s12 m6 l4">
+            <div class="col s12 m6 l4" >
             <div class="card medium">
               <div class="card-image waves-effect waves-block waves-light">
                 <img alt="quiz app" src="/assets/img/project-quizup-logo-1.png" style="height: 100%; width: 100%" class="activator" />
@@ -732,6 +732,11 @@
 
     var but = document.getElementById("load-more");
     var divs = document.querySelectorAll('.getme > div');
+    divs.sort(function(a,b){
+  // Turn your strings into dates, and then subtract them
+  // to get a value that is either negative, positive, or zero.
+  return new Date(b.date) - new Date(a.date);
+});
     var insert = document.getElementById("insert");
 
     insert.appendChild(divs[0].cloneNode(true));
