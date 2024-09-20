@@ -19,6 +19,18 @@
 6. ![image](https://github.com/user-attachments/assets/28892930-5337-4831-8eb8-6135f9d9c03b)
 7. ![image](https://github.com/user-attachments/assets/eef01dd7-bc35-459f-9410-0caaaa1fa85f)
 
+## Activity-3
+
+1. Replaced colour theme ensuring it's aesthetic
+2. ![image](https://github.com/user-attachments/assets/8e6c40bf-4551-4dd3-83c3-5d6388494982)
+
+## Activity-4
+
+1. Created a new section called places travelled
+2. Added section to nav bar
+3. Added map to the website
+4. 
+
 
 
 
